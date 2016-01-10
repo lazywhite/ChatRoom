@@ -13,7 +13,7 @@ class MainHandler(tornado.web.RequestHandler):
 class RoomHandler(tornado.web.RequestHandler): 
     def get(self, room):
         print room
-        self.render('index.html', room_list=xrange(1,5))
+        self.render('index.html', room_list=xrange(1,11))
 
 
 
