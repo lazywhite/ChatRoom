@@ -1,5 +1,51 @@
 {% extends "page39.html" %}
 
 {% block content %}
-<h1> hello </h1>
+<div class="form-inline">
+<div class="form-group">
+    <input class="form-control" id="msg" placeholder="Input message" type="text"/>
+</div> 
+<div class="form-group">
+    <button class="btn-primary" id="submit">Submit</button>
+</div> 
+</div>
+<div id="content" style="width: 100px;height:200px">
+</div>
+{% end %}
+
+{% block script %}
+<script type="text/javascript">
+var host = location.origin.replace(/^http/, 'ws')
+var ws = new WebSocket(host +"/ws/" + location.pathname.replace('/room/', '').replace('/', ''));
+
+
+$(document).ready(function() {
+    if (!window.console) window.console = {};
+    if (!window.console.log) window.console.log = function() {};
+
+    console.log('starting');
+    console.log(ws);
+    $("#msg").focus();
+    $("#submit").click(postMessage);
+    
+    ws.onmessage = function(event) {
+        console.log('received message');
+        data = JSON.parse(event.data);
+        console.log(data);
+        $("#content").append('<h1>'+data.body+'</h1>');
+    };
+});
+
+
+function postMessage() {
+    var value = $("#msg").val();
+    console.log(value);
+    var message = {body: value};
+    ws.send(JSON.stringify(message));
+    console.log('sending message');
+}
+
+
+</script>
+
 {% end %}
