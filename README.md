@@ -3,15 +3,18 @@
 This is a demo of ChatRoom based on Tornado and Redis  
 
 >Features:  
->>    multiple room support  
->>    Html5 as front-end
+>>    multiple client supported  
+>>    multiple room supported  
+>>    Html5 as front-end  
+>>    websocket envolved  
     
 
 >BluePrint:  
 >>    login support  
 >>    session support  
 >>    async redis client  
->>    more other front-end  
+>>    more other front-end    
+>>    logging support  
      
 
 # Environment 

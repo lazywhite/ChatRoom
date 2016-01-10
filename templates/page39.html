@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block page %}
+<div class="col-md-3">
+    {% include 'sidebar.html' %}
+</div>
+<div class="col-md-9">
+    {% block content %} {% end %}
+</div>
+{% end %}

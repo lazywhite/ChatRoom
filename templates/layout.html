@@ -1,0 +1,21 @@
+<html lang='zh_CN'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"/></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"/></script>
+{% block css %}{% end %}
+</head>
+<body>
+<div class='container-fluid'>
+    {% include 'header.html' %}
+    <div class='row-fluid'>
+        {% block page %}
+        {% end %}
+    </div>
+</div>
+{% block script  %} {% end %}
+</body>
+</html>
