@@ -36,4 +36,4 @@ make sure redis server is running, modify config.py as needed
 python chat.py  
 ```
 navigate your browser to [ChatRoom](http://localhost:8000/)  
-open multiple table at same time to check the effect
+open multiple tabs at same time to check the effect
