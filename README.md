@@ -3,7 +3,7 @@
 This is a demo of ChatRoom based on Tornado and Redis  
 
 >Features:  
->>    multiple room support
+>>    multiple room support  
 >>    Html5 as front-end
     
 
