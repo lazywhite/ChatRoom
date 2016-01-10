@@ -13,8 +13,8 @@
 <div class="table-responsive">
 <table id="content" class="table table-striped table-hover table-bordered">
     <tr>
-        <th>用户名</th>
-        <th>消息</th>
+        <th style="width:50px">用户</th>
+        <th style="text-align:center">消息</th>
     <tr>
 </table>
 </div>
@@ -39,7 +39,7 @@ $(document).ready(function() {
         console.log('received message');
         data = JSON.parse(event.data);
         console.log(data);
-        $("#content").append('<tr><td>Guest</td><td>'+data.body+'</td></tr>');
+        $("#content").append('<tr><td style="width:50px">Guest</td><td>'+data.body+'</td></tr>');
     };
 });
 
