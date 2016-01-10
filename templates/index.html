@@ -9,7 +9,14 @@
     <button class="btn-primary" id="submit">Submit</button>
 </div> 
 </div>
-<div id="content" style="width: 100px;height:200px">
+<br />
+<div class="table-responsive">
+<table id="content" class="table table-striped table-hover table-bordered">
+    <tr>
+        <th>用户名</th>
+        <th>消息</th>
+    <tr>
+</table>
 </div>
 {% end %}
 
@@ -32,7 +39,7 @@ $(document).ready(function() {
         console.log('received message');
         data = JSON.parse(event.data);
         console.log(data);
-        $("#content").append('<h1>'+data.body+'</h1>');
+        $("#content").append('<tr><td>Guest</td><td>'+data.body+'</td></tr>');
     };
 });
 
