@@ -23,12 +23,15 @@ This is a demo of ChatRoom based on Tornado and Redis
 >Python: 2.7.10  
 
 # Installation
+```
 >virtualenv chat_env   
 >source chat_env/bin/activate  
 >(chat_env)# pip install -r requirements.txt  
-
+```
 
 # Usage
 make sure redis server is running, modify config.py as needed  
->>python chat.py  
-navigate your browser to (ChatRoom)[http://localhost:8000/]
+```
+python chat.py  
+```
+navigate your browser to [ChatRoom](http://localhost:8000/)
