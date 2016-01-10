@@ -29,5 +29,6 @@ This is a demo of ChatRoom based on Tornado and Redis
 
 
 # Usage
-python chat.py  
-navigate your browser to http://localhost:8000/
+make sure redis server is running, modify config.py as needed  
+>>python chat.py  
+navigate your browser to (ChatRoom)[http://localhost:8000/]
