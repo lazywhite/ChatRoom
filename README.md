@@ -1,21 +1,6 @@
-# Introduction
+## Introduction
 
-This is a demo of ChatRoom based on Tornado and Redis  
-```
-Features:  
-    multiple client supported  
-    multiple room supported  
-    Html5 as front-end  
-    websocket envolved  
-    
-
-BluePrint:  
-    login support  
-    session support  
-    async redis client  
-    more other front-end    
-    logging support  
-```     
+This is a ChatRoom HTML5 App based on Tornado, Redis, Bootstrap3
 
 # Environment 
 ```
@@ -23,17 +8,16 @@ OS: MacOS X EI
 Redis: 3.0  
 Python: 2.7.10  
 ```
-# Installation
-```
-#virtualenv chat_env   
-#source chat_env/bin/activate  
-(chat_env)# pip install -r requirements.txt  
-```
 
 # Usage
-make sure redis server is running, modify config.py as needed  
 ```
-python chat.py  
+1. make sure redis server is running
+2. clone this repo
+
+$ virtualenv chat_env   
+$ source chat_env/bin/activate  
+$ (chat_env)# pip install -r requirements.txt  
+
+$ modify "config.py"
+$ python chat.py  
 ```
-navigate your browser to [ChatRoom](http://localhost:8000/)   
-open multiple tabs at same time to check the effect

@@ -20,4 +20,5 @@ def make_app():
 if __name__ == "__main__":
     app = make_app()
     app.listen(port) 
+    print "listening on: http://localhost:%d" % port
     tornado.ioloop.IOLoop.current().start()
